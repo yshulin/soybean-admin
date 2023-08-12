@@ -396,6 +396,10 @@ declare namespace I18nType {
         user: string;
       };
       about: string;
+      solution: {
+        _value: string;
+        list: string;
+      };
     };
     layout: {
       settingDrawer: {

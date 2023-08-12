@@ -1,6 +1,7 @@
 <template>
   <icon-local-logo-fill v-if="fill" />
-  <icon-local-logo v-else />
+  <!-- <icon-local-logo v-else /> -->
+  <icon-local-logo-zk v-else />
 </template>
 
 <script lang="ts" setup>

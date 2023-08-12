@@ -12,7 +12,7 @@
           :is="Component"
           v-if="app.reloadFlag"
           :key="route.fullPath"
-          :class="{ 'p-16px': showPadding }"
+          :class="{ 'p-10px': showPadding }"
           class="flex-grow bg-#f6f9f8 dark:bg-#101014 transition duration-300 ease-in-out"
         />
       </keep-alive>

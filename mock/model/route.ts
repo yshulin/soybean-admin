@@ -542,18 +542,42 @@ export const routeModel: Record<Auth.RoleType, AuthRoute.Route[]> = {
         order: 9
       }
     },
+    // {
+    //   name: 'about',
+    //   path: '/about',
+    //   component: 'self',
+    //   meta: {
+    //     title: '关于',
+    //     i18nTitle: 'routes.about',
+    //     requiresAuth: true,
+    //     keepAlive: true,
+    //     singleLayout: 'basic',
+    //     icon: 'fluent:book-information-24-regular',
+    //     order: 10
+    //   }
+    // },
     {
-      name: 'about',
-      path: '/about',
-      component: 'self',
+      name: 'solution',
+      path: '/solution',
+      component: 'basic',
+      children: [
+        {
+          name: 'solution_list',
+          path: '/solution/list',
+          component: 'self',
+          meta: {
+            title: '排查方案列表',
+            requiresAuth: true,
+            icon: 'icon-park-outline:analysis',
+            i18nTitle: 'routes.solution.list'
+          }
+        }
+      ],
       meta: {
-        title: '关于',
-        i18nTitle: 'routes.about',
-        requiresAuth: true,
-        keepAlive: true,
-        singleLayout: 'basic',
-        icon: 'fluent:book-information-24-regular',
-        order: 10
+        title: '排查方案管理',
+        icon: 'mdi:monitor-dashboard',
+        order: 11,
+        i18nTitle: 'routes.solution._value'
       }
     }
   ],
@@ -1113,6 +1137,30 @@ export const routeModel: Record<Auth.RoleType, AuthRoute.Route[]> = {
         icon: 'fluent:book-information-24-regular',
         order: 10
       }
+    },
+    {
+      name: 'solution',
+      path: '/solution',
+      component: 'basic',
+      children: [
+        {
+          name: 'solution_list',
+          path: '/solution/list',
+          component: 'self',
+          meta: {
+            title: '排查方案列表',
+            requiresAuth: true,
+            icon: 'icon-park-outline:analysis',
+            i18nTitle: 'routes.solution.list'
+          }
+        }
+      ],
+      meta: {
+        title: '排查方案管理',
+        icon: 'mdi:monitor-dashboard',
+        order: 11,
+        i18nTitle: 'routes.solution._value'
+      }
     }
   ],
   user: [
@@ -1257,6 +1305,30 @@ export const routeModel: Record<Auth.RoleType, AuthRoute.Route[]> = {
         singleLayout: 'basic',
         icon: 'fluent:book-information-24-regular',
         order: 10
+      }
+    },
+    {
+      name: 'solution',
+      path: '/solution',
+      component: 'basic',
+      children: [
+        {
+          name: 'solution_list',
+          path: '/solution/list',
+          component: 'self',
+          meta: {
+            title: '排查方案列表',
+            requiresAuth: true,
+            icon: 'icon-park-outline:analysis',
+            i18nTitle: 'routes.solution.list'
+          }
+        }
+      ],
+      meta: {
+        title: '排查方案管理',
+        icon: 'mdi:monitor-dashboard',
+        order: 11,
+        i18nTitle: 'routes.solution._value'
       }
     }
   ]

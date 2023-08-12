@@ -1,6 +1,6 @@
 const locale: I18nType.Schema = {
   system: {
-    title: 'Soybean管理系统'
+    title: '专家诊断系统'
   },
   common: {
     add: '添加',
@@ -87,7 +87,11 @@ const locale: I18nType.Schema = {
       route: '路由管理',
       user: '用户管理'
     },
-    about: '关于'
+    about: '关于',
+    solution: {
+      _value: '排查方案管理',
+      list: '排查方案列表'
+    }
   },
   layout: {
     settingDrawer: {

@@ -15,6 +15,7 @@
     :sider-width="siderWidth"
     :sider-collapsed-width="siderCollapsedWidth"
     :footer-visible="theme.footer.visible"
+    :footer-height="theme.footer.height"
     :fixed-footer="theme.footer.fixed"
     :right-footer="theme.footer.right"
     @click-mobile-sider-mask="app.setSiderCollapse(true)"

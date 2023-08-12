@@ -73,7 +73,7 @@
   "showReload": true,
   "header": {
     "inverted": false,
-    "height": 56,
+    "height": 50,
     "crumb": {
       "visible": true,
       "showIcon": true
@@ -81,7 +81,7 @@
   },
   "tab": {
     "visible": true,
-    "height": 44,
+    "height": 38,
     "mode": "chrome",
     "modeList": [
       {
@@ -124,7 +124,7 @@
     "visible": true,
     "fixed": false,
     "right": true,
-    "height": 48,
+    "height": 45,
     "inverted": false
   },
   "page": {

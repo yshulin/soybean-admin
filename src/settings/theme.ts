@@ -58,7 +58,7 @@ const defaultThemeSetting: Theme.Setting = {
   showReload: true,
   header: {
     inverted: false,
-    height: 56,
+    height: 50,
     crumb: {
       visible: true,
       showIcon: true
@@ -66,7 +66,7 @@ const defaultThemeSetting: Theme.Setting = {
   },
   tab: {
     visible: true,
-    height: 44,
+    height: 38,
     mode: 'chrome',
     modeList: themeTabModeOptions,
     isCache: true
@@ -87,7 +87,7 @@ const defaultThemeSetting: Theme.Setting = {
     visible: true,
     fixed: false,
     right: true,
-    height: 48,
+    height: 45,
     inverted: false
   },
   page: {
