@@ -87,7 +87,11 @@ const locale: I18nType.Schema = {
       route: 'Route',
       user: 'User'
     },
-    about: 'About'
+    about: 'About',
+    solution: {
+      _value: 'Solution Management',
+      list: 'List'
+    }
   },
   layout: {
     settingDrawer: {
