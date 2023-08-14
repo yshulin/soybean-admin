@@ -13,6 +13,17 @@ const solution: AuthRoute.Route = {
         icon: 'icon-park-outline:analysis',
         i18nTitle: 'routes.solution.list'
       }
+    },
+    {
+      name: 'solution_fast-crud',
+      path: '/solution/fast-crud',
+      component: 'self',
+      meta: {
+        title: '排查方案列表2',
+        requiresAuth: true,
+        icon: 'icon-park-outline:analysis',
+        i18nTitle: 'routes.solution.list'
+      }
     }
   ],
   meta: {

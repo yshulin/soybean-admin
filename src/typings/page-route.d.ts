@@ -78,6 +78,7 @@ declare namespace PageRoute {
     | 'plugin_swiper'
     | 'plugin_video'
     | 'solution'
+    | 'solution_fast-crud'
     | 'solution_list';
 
   /**
@@ -132,6 +133,7 @@ declare namespace PageRoute {
     | 'plugin_print'
     | 'plugin_swiper'
     | 'plugin_video'
+    | 'solution_fast-crud'
     | 'solution_list'
   >;
 }
