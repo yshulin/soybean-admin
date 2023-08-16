@@ -5,7 +5,7 @@ import MockOption = Service.MockOption;
 
 const options: BaseMockOptions = {
   name: 'crud/demo',
-  idGenerator: 0,
+  idGenerator: 1,
   list: [
     {
       select: '1',

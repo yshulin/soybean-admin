@@ -23,18 +23,33 @@ export default function createCrudOptions(): CreateCrudOptionsRet {
   };
   return {
     crudOptions: {
-      container: {
-        is: 'fs-layout-card'
-      },
       request: {
         pageRequest,
         addRequest,
         editRequest,
         delRequest
       },
+      container: {
+        is: 'fs-layout-card'
+      },
+      search: {
+        options: {
+          labelWidth: '120px' // 表单label宽度
+        },
+        container: {
+          // layout: 'multi-line'
+          action: {
+            label: ' ', // 查询按钮前缀
+            col: { span: 6 } // 查询按钮所占格子宽度
+          }
+        },
+        col: {
+          span: 6
+        }
+      },
       columns: {
         id: {
-          title: 'ID',
+          title: '序号',
           key: 'id',
           type: 'number',
           column: {
@@ -44,8 +59,19 @@ export default function createCrudOptions(): CreateCrudOptionsRet {
             show: false
           }
         },
+        account: {
+          title: '创建人账号',
+          key: 'account',
+          type: 'text'
+        },
+        name: {
+          title: '创建人姓名',
+          key: 'name',
+          type: 'text',
+          search: { show: true }
+        },
         datetime: {
-          title: '时间',
+          title: '创建时间',
           type: 'datetime',
           // naive 默认仅支持数字类型时间戳作为日期输入与输出
           // 字符串类型的时间需要转换格式
@@ -61,53 +87,51 @@ export default function createCrudOptions(): CreateCrudOptionsRet {
             if (value) {
               form[key] = dayjs(value).format('YYYY-MM-DD HH:mm:ss');
             }
-          }
+          },
+          search: { show: true }
         },
-        select: {
-          title: '状态',
-          search: { show: true },
-          type: 'dict-select',
-          dict: dict({
-            url: '/mock/crud/demo/dict'
-          })
-        },
-        text: {
-          title: '文本',
+        solution_id: {
+          title: '方案ID',
+          key: 'solution_id',
           type: 'text',
           search: { show: true }
         },
-        copyable: {
-          title: '可复制',
-          type: ['text', 'copyable'],
+        solution_content: {
+          title: '方案描述',
+          key: 'solution_content',
+          type: 'text',
+          column: {
+            width: 250
+          },
           search: { show: true }
         },
-        avatar: {
-          title: '头像裁剪',
-          type: 'cropper-uploader'
+        solution_type: {
+          title: '方案分类',
+          type: 'text',
+          key: 'solution_type',
+          search: { show: true }
         },
-        upload: {
-          title: '文件上传',
-          type: 'file-uploader'
+        instrument_type: {
+          title: '适用平台',
+          key: 'solution_type',
+          type: 'text',
+          search: { show: true }
         },
-        richtext: {
-          title: '富文本',
-          type: 'editor-wang5',
-          column: {
-            // cell中不显示
-            show: false
-          },
-          form: {
-            col: {
-              // 横跨两列
-              span: 24
-            },
-            component: {
-              style: {
-                height: '300px'
-              }
-            }
-          }
+        is_visible: {
+          title: '现场端是否可见',
+          key: 'is_visible',
+          type: 'dict-select',
+          dict: dict({
+            data: [
+              { value: true, label: '是' },
+              { value: false, label: '否' }
+            ]
+          }),
+          search: { show: true }
         }
+      },
+      rowHandle: {
+        width: '150px'
       }
     }
   };

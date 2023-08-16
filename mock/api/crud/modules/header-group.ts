@@ -5,7 +5,7 @@ import MockOption = Service.MockOption;
 
 const options: BaseMockOptions = {
   name: 'crud/header-group',
-  idGenerator: 0,
+  idGenerator: 1,
   list: [
     {
       name: '张三',

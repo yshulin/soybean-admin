@@ -1,6 +1,6 @@
 const locale: I18nType.Schema = {
   system: {
-    title: '专家诊断系统'
+    title: '专家诊断管理系统'
   },
   common: {
     add: '添加',
