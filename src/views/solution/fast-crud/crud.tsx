@@ -1,7 +1,13 @@
+import { ref } from 'vue';
 import type { AddReq, CreateCrudOptionsRet, DelReq, EditReq, UserPageQuery, UserPageRes } from '@fast-crud/fast-crud';
 import { dict } from '@fast-crud/fast-crud';
 import dayjs from 'dayjs';
 import * as api from './api';
+
+const showModal = ref(false);
+function showAddModal() {
+  showModal.value = true;
+}
 
 export default function createCrudOptions(): CreateCrudOptionsRet {
   const pageRequest = async (query: UserPageQuery): Promise<UserPageRes> => {
@@ -16,7 +22,6 @@ export default function createCrudOptions(): CreateCrudOptionsRet {
     const { row } = ctx;
     return api.DelObj(row.id);
   };
-
   const addRequest = async (req: AddReq) => {
     const { form } = req;
     return api.AddObj(form);
@@ -45,6 +50,18 @@ export default function createCrudOptions(): CreateCrudOptionsRet {
         },
         col: {
           span: 6
+        }
+      },
+      actionbar: {
+        buttons: {
+          add: {
+            click: showAddModal
+            // click: () => {
+            //   showModal.value = true;
+            //   // eslint-disable-next-line no-alert
+            //   // alert('fdasfd');
+            // }
+          }
         }
       },
       columns: {
@@ -136,3 +153,5 @@ export default function createCrudOptions(): CreateCrudOptionsRet {
     }
   };
 }
+
+export { showModal };
